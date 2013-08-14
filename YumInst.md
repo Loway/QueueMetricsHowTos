@@ -1,5 +1,0 @@
-Yum Installation
-================
-
-Empty file
-
