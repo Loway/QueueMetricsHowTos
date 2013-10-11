@@ -42,8 +42,24 @@ Just add our repository and install the package:
 Now, install the Qloader script in each of your Asterisk boxes.
     
     yum install qloaderd
+    
+### 3.2 On another Linux distrubion
 
-### 3.2 Does it work?
+QueueMetrics is a Java servlet application that runs over a Tomcat server. Potentially you can run QueueMetrics on every Linux distribution and Operating System, Windows as well.
+Although the procedure may change amongst the various different systems, conceptually it's ever the same: installing all the dependencies and put QueueMetrics on the Tomcat server.
+Given that we can cover every possible Operating System, we'll use a Debian machine to show you the steps to get QueueMetrics working. Your part will be to adapt the steps to your system and situation.
+
+#### 3.2.1 Installing Java
+    
+    # Download Java JRE for your system and architecture: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+    # Unpack it and move it where you retain suitable.
+    
+    tar xfvz jre-7u40-linux-i586.tar.gz 
+    mv jre1.7.0_40 /opt/jre1.7.0_40
+    
+
+
+### 3.3 Does it work?
 
 Now, to check that everything works you can open your browser and point it to _http://hostname:8080/queuemetrics_, the first time you run it you might get an error, it will disappear in a few seconds and QueueMetrics will guide you through the database configuration; probably you'll just need to confirm without make any change.
 After that you will be able to log in with the default username _demoadmin_ and password _demo_.
