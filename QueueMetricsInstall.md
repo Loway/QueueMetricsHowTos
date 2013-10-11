@@ -106,9 +106,6 @@ In Debian you can install it with a simple command and follow the procedure.
 		/opt/tomcat-7.0.42/bin/shutdown.sh
 		/opt/tomcat-7.0.42/bin/startup.sh
 
-* Now point your browser to QueueMetrics (e.g. 10.10.1.1:8080/queuemetrics), if it's working you'll see a QueueMetrics' screen with an error message. That's because a QueueMetrics don't have a database yet. Wait a few second and you'll be guided into an automatic creation of the database.
-* Now you can access for the first time to QueueMetrics (username: demoadmin; password: demo) and proceed with the configuration.
-
 ### 3.3 Does it work?
 
 Now, to check that everything works you can open your browser and point it to _http://hostname:8080/queuemetrics_, the first time you run it you might get an error, it will disappear in a few seconds and QueueMetrics will guide you through the database configuration; probably you'll just need to confirm without make any change.
