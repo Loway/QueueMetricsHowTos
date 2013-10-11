@@ -56,7 +56,10 @@ Given that we can cover every possible Operating System, we'll use a Debian mach
     
     tar xfvz jre-7u40-linux-i586.tar.gz 
     mv jre1.7.0_40 /opt/jre1.7.0_40
+
+* Complete the set up
     
+    update-alternatives --install /usr/bin/java java /opt/jre1.7.0_40/bin/java
 
 
 ### 3.3 Does it work?
