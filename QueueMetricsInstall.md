@@ -95,7 +95,7 @@ In Debian you can install it with a simple command and follow the procedure.
 * Unpack it and move it to the Tomcat's webapp directory
         
         tar xzfv QueueMetrics-13.04.2-trial.tar.gz
-        queuemetrics-13.04.2 /opt/tomcat-7.0.42/webapps/queuemetrics
+        cp queuemetrics-13.04.2 /opt/tomcat-7.0.42/webapps/queuemetrics
 
 * Copy the MySQL-Java connector in the QueueMetrics' WEB-INF/lib directory
 
@@ -103,10 +103,10 @@ In Debian you can install it with a simple command and follow the procedure.
 
 * Restart Tomcat
 
-        /opt/tomcat-7.0.42/bin/shutdown.sh
+		/opt/tomcat-7.0.42/bin/shutdown.sh
 		/opt/tomcat-7.0.42/bin/startup.sh
 
-* Now point your browser to QueueMetrics (e.g. 10.10.1.1:8080/queuemetrics), if it's working you'll see a QueueMetrics' screen with an error message. That's because a QueueMetrics don't have a database yet. Wait a few second and will be guided into an automatic creation of the database.
+* Now point your browser to QueueMetrics (e.g. 10.10.1.1:8080/queuemetrics), if it's working you'll see a QueueMetrics' screen with an error message. That's because a QueueMetrics don't have a database yet. Wait a few second and you'll be guided into an automatic creation of the database.
 * Now you can access for the first time to QueueMetrics (username: demoadmin; password: demo) and proceed with the configuration.
 
 ### 3.3 Does it work?
