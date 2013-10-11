@@ -14,7 +14,7 @@ We always suggest to use the Qloader script whatever configuration you have.
 
 If you are setting up a single-server solution on an Asterisk-ready Linux distribution (eg. Elastix, AsteriskNOW, FreePBX, etc) you can get a working QueueMetrics system in a few minutes.
 
-TIP:	Check if the Espresso installer supports your distribution version in the _Supported PBXs_ section at _http://queuemetrics.com/manuals/QM&#95;Espresso-chunked_.
+TIP:	Check if the Espresso installer supports your distribution version in the _Supported PBXs_ section at http://queuemetrics.com/manuals/QM_Espresso-chunked .
 
 Just add our repository and install the package:
 
@@ -190,4 +190,4 @@ If you experience any problem with QueueMetrics ask us on _http://support.loway.
 
 ## 8 Conclusion
 
-QueueMetrics has a lot of configuration options to enable you personalizing it for your needs. We suggest you to read about them on the user manuals at _http://queuemetrics.com/manual&#95;list.jsp_.
+QueueMetrics has a lot of configuration options to enable you personalizing it for your needs. We suggest you to read about them on the user manuals at http://queuemetrics.com/manual_list.jsp .
