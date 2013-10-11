@@ -6,7 +6,7 @@ Depending on how big is your system you might want to have a single-server solut
 ## 1 Understanding How QueueMetrics Works
 
 All the data which QueueMetrics works on are stored in Asterisk's queue_log file. In a single-server configuration, QueueMetrics is able to read directly from this file but this is not an efficient approach.
-The Qloader script provides an effective way to retrieve information from the _queue_log_ file without overloading the Asterisk server(s) and it's essential in a cluster-server configuration.
+The Qloader script provides an effective way to retrieve information from the _queue\_log_ file without overloading the Asterisk server(s) and it's essential in a cluster-server configuration.
 It reads the new data from the queue_log file and sends it to the QueueMetrics database wherever it is.
 We always suggest to use the Qloader script whatever configuration you have.
 
@@ -190,4 +190,4 @@ If you experience any problem with QueueMetrics ask us on _http://support.loway.
 
 ## 8 Conclusion
 
-QueueMetrics has a lot of configuration options to enable you personalizing it for your needs. We suggest you to read about them on the user manuals at _http://queuemetrics.com/manual_list.jsp_.
+QueueMetrics has a lot of configuration options to enable you personalizing it for your needs. We suggest you to read about them on the user manuals at _http://queuemetrics.com/manual\_list.jsp_.
