@@ -54,12 +54,12 @@ Given that we can cover every possible Operating System, we'll use a Debian mach
 * Download Java JRE for your system and architecture: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 * Unpack it and move it where you retain suitable.
     
-    tar xfvz jre-7u40-linux-i586.tar.gz 
-    mv jre1.7.0_40 /opt/jre1.7.0_40
+        tar xfvz jre-7u40-linux-i586.tar.gz 
+        mv jre1.7.0_40 /opt/jre1.7.0_40
 
 * Complete the set up
     
-    update-alternatives --install /usr/bin/java java /opt/jre1.7.0_40/bin/java
+        update-alternatives --install /usr/bin/java java /opt/jre1.7.0_40/bin/java
 
 
 ### 3.3 Does it work?
