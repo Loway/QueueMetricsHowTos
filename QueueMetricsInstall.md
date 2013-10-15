@@ -42,7 +42,7 @@ Just add our repository and install the package:
 Now, install the Qloader script in each of your Asterisk boxes.
     
 		wget -P /etc/yum.repos.d http://yum.loway.ch/loway.repo
-    yum install qloaderd
+		yum install qloaderd
     
 ### 3.2 On another system (yes, Windows too)
 
