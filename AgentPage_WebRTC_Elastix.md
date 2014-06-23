@@ -31,29 +31,29 @@ Log in as demoadmin with password demo; if you don�t see any errors, then your
 * Add the following sketch. This defines a template for agents using the WebRTC softphone integrated in Icon, the QueueMetrics realtime page.
 
 
-    [WebRTC](!)
-    type=peer
-    host=dynamic
-    nat=force_rport,comedia
-    context=from-internal
-    callcounter=yes
-    busylevel=1
-    call-limit=1
-    encryption = yes
-    qualify=yes
-    avpf = yes
-    allow=all
-    icesupport = yes
-    srtpcapable=yes
-    videosupport=no
-    
-    [101](WebRTC)
-    username=101
-    secret=101
-    
-    [102](WebRTC)
-    username=102
-    secret=102
+	[WebRTC](!)
+	type=peer
+	host=dynamic
+	nat=force_rport,comedia
+	context=from-internal
+	callcounter=yes
+	busylevel=1
+	call-limit=1
+	encryption = yes
+	qualify=yes
+	avpf = yes
+	allow=all
+	icesupport = yes
+	srtpcapable=yes
+	videosupport=no
+	
+	[101](WebRTC)
+	username=101
+	secret=101
+	
+	[102](WebRTC)
+	username=102
+	secret=102
 
 
 The sketch defines also two SIP accounts (101 and 102) used by two sample agents defined in QueueMetrics.
