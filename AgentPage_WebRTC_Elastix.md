@@ -18,7 +18,7 @@ This file is a step by step guide to integrate Icon, the new QueueMetrics agent 
 
 The yum command will download QueueMetrics and all of its dependencies and install them on your system. This may take a while, depending on your internet connection speed. When asked to confirm the installation, type "y" to proceed.
 When the installation is complete, you will have to point your browser to the address http://myserver:8080/queuemetrics and you should see the QueueMetrics home page (you will be asked to accept the EULA first).
-Log in as demoadmin with password demo; if you don�t see any errors, then your system is correctly configured.
+Log in as demoadmin with password demo; if you don't see any errors, then your system is correctly configured.
 
 ## Step 4: Configure an inbound queue in Elastix
 * Access to the Elastix configuration panel and click on PBX menu.
@@ -31,7 +31,7 @@ Log in as demoadmin with password demo; if you don�t see any errors, then your
 * Add the following sketch. This defines a template for agents using the WebRTC softphone integrated in Icon, the QueueMetrics realtime page.
 
 
-	[WebRTC](!)
+	\[WebRTC\]\(\!\)
 	type=peer
 	host=dynamic
 	nat=force_rport,comedia
@@ -46,12 +46,14 @@ Log in as demoadmin with password demo; if you don�t see any errors, then your
 	icesupport = yes
 	srtpcapable=yes
 	videosupport=no
-	
-	[101](WebRTC)
+
+[101](WebRTC)
+
 	username=101
 	secret=101
-	
-	[102](WebRTC)
+
+[102](WebRTC)
+
 	username=102
 	secret=102
 
