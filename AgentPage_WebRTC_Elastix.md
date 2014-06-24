@@ -89,10 +89,12 @@ We need to associated the SIP credentials defined at step 5 to the agents in Que
 QueueMetrics needs to know the IP where the softphone will register. To do that:
 * From the QueueMetrics home page, click on the Edit system parameters link under the Administrative tools section.
 * Search the default.sipaddress, default.websocketurl and default.rtcWebBreaker keys and edit as following:
+ 
+.
 
-default.sipaddress=XXX.XXX.XXX.XXX
-default.websocketurl=ws://XXX.XXX.XXX.XXX:8088/ws
-default.rtcWebBreaker=true
+	default.sipaddress=XXX.XXX.XXX.XXX
+	default.websocketurl=ws://XXX.XXX.XXX.XXX:8088/ws
+	default.rtcWebBreaker=true
 
 where XXX.XXX.XXX.XXX is the IP address valid for your install: this is the IP address associated to your PBX.
 
