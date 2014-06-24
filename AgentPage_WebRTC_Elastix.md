@@ -28,10 +28,11 @@ Log in as demoadmin with password demo; if you don't see any errors, then your s
 
 ## Step 5: Configure a set of SIP account for WebRTC clients
 * Through an SSH connection, enter in the /etc/asterisk folder and edit the sip_custom.conf file.
-* Add the following sketch. This defines a template for agents using the WebRTC softphone integrated in Icon, the QueueMetrics realtime page.
+* Add the following sketch. This defines a template for agents using the WebRTC softphone integrated in Icon, the QueueMetrics realtime page.   
 
+. 
 
-	\[WebRTC\]\(\!\)
+	[WebRTC](!)
 	type=peer
 	host=dynamic
 	nat=force_rport,comedia
@@ -47,13 +48,11 @@ Log in as demoadmin with password demo; if you don't see any errors, then your s
 	srtpcapable=yes
 	videosupport=no
 
-[101](WebRTC)
-
+	[101](WebRTC)
 	username=101
 	secret=101
 
-[102](WebRTC)
-
+	[102](WebRTC)
 	username=102
 	secret=102
 
