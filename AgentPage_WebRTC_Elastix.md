@@ -63,6 +63,13 @@ The sketch defines also two SIP accounts (101 and 102) used by two sample agents
 * Through an SSH connection, enter in the /etc/asterisk folder and edit the http.conf file.
 * Set the key enabled=yes and bindaddr=0.0.0.0 configuration variables.
 * Save the file and exit.
+* Edit the file sip_general_custom.conf and add the following keys to enable the ws transport:
+
+.
+
+	allowguest=no
+	transport=udp,ws,wss
+	
 
 ## Step 7: Define two sample callers extensions in Elastix
 Two samples extensions are used in this tutorial to simulate calls flowing to the inbound queue. To do this, proceed with the following steps.
