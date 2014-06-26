@@ -4,8 +4,8 @@ This file is a step by step guide to integrate Icon, the new QueueMetrics agent 
 
 
 ## Step 1: Install FreePBX
-* Download FreePBX 5.211.65-14 (we tested the 32 bit version) and proceed installing the ISO as usual. Select FreePBX 5.211.65 with Asterisk 11, Full Install. 
-Asterisk 11.10.2 will be installed.
+* Download FreePBX BETA-6.12.65-13 (we tested the 32 bit version) and proceed installing the ISO as usual. Select FreePBX 6.12.65 with Asterisk 12, Full Install. 
+Asterisk 12.3.2 will be installed.
 
 ## Step 2: Installing QueueMetrics with Espresso
 * Open an SSH session pointing your SSH client to the FreePBX machine.
@@ -64,12 +64,27 @@ The sketch defines also two SIP accounts (101 and 102) used by two sample agents
 	allowguest=no
 	transport=udp,ws,wss
 	
+* Edit rtp_additional.conf file located on the same folder and modify the key icesupport to true:
 
+
+. 
+
+	icesupport=true
+
+	
+* Save the file and restart asterisk by issuing the command:
+
+
+. 
+
+	/etc/init.d/asterisk restart
+	
+	
 
 ## Step 6: Define two sample callers extensions in FreePBX
 Two samples extensions are used in this tutorial to simulate calls flowing to the inbound queue. To do this, proceed with the following steps.
 * Access to the FreePBX configuration panel and click on Applications->Extensions menu.
-* Select Generic SIP Device from the dropdown, then click "Submit".
+* Select Generic CHAN SIP Device from the dropdown, then click "Submit".
 * Fill the User Extension, Display Name and secret fields with 200, then press "Submit".
 * Repeat the same for the extension 201.
 * Apply configuration changes to the Asterisk PBX.
@@ -107,16 +122,10 @@ where XXX.XXX.XXX.XXX is the IP address valid for your install: this is the IP a
 * Click on the top left menu and show the Agent Logon panel. 
 * Click on the "queue 300" item you can find under Available Queues, then click on the ">" button to start a log-in procedure. In a few seconds the bullet icon located on the
 right side top menu should mark green. You're now logged into the queue 300.
-* By mean of an external phone you previously registered with SIP credential defined in the step 7, place a call to the internal extension 300.
+* By mean of an external phone you previously registered with SIP credential defined in the step 7 (please note chan_sip is running on port 5061), place a call to the internal extension 300.
 
 The agent softphone pops up and starts ringing. You can answer by clicking on the red flashing icon on this panel.
 
 NOTE: Chrome asks for a confirmation on sharing microphone and speakers each time a new call flows in. This could be avoided by setting up QueueMetrics to be served through HTTPS
 instead of HTTP. Please refer to the QueueMetrics Advanced Configuration Manual located at http://manuals.loway.ch/QM_AdvancedConfig-chunked
 
-NOTE: In our lab tests we were not able to have a running environment. Each call answered by the softphone produced the following log in Asterisk:
-
-
-	DEBUG[16123][C-00000004]: sip/sdp_crypto.c:310 sdp_crypto_offer: Crypto line: a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:3iRWf+39pe3Wgnu5seFancPhO89Y5+G1cVGT5Smc
-	
-We are looking for a solution on that.
