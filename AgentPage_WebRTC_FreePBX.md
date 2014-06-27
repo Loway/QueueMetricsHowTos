@@ -118,7 +118,7 @@ where XXX.XXX.XXX.XXX is the IP address valid for your install: this is the IP a
 
 ## Step 9: Use the WebRTC softphone integrated in Icon
 * Access to the QueueMetrics Agent page by pointing a Chrome browser to  http://myserver:8080/queuemetrics and using Agent/101 and 999 as username and password.
-* Click on Icon by clicking on Show inbound calls for agent Agent/101 under Inbound calls menu. Icon will load. 
+* Enter on Icon by clicking on Show inbound calls for agent Agent/101 under Inbound calls menu. Icon will load. 
 * Click on the top left menu and show the Agent Logon panel. 
 * Click on the "queue 300" item you can find under Available Queues, then click on the ">" button to start a log-in procedure. In a few seconds the bullet icon located on the
 right side top menu should mark green. You're now logged into the queue 300.
