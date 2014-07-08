@@ -15,6 +15,7 @@ Tested with QueueMetrics 14.06.2
 | FreePBX BETA-6.12.65-13 32bit (Asterisk 12.3.2) | OK (1) | OK                 | KO: registration OK but not calls (7)| KO  | KO: registration OK but no calls (5) | KO |
 
 
+```
 (1) - Chrome asks for sharing microphone on each call
 (2) - chan_sip.c:10509 process_sdp: Rejecting secure audio stream without encryption details: audio 60349 UDP/TLS/RTP/SAVPF 109 0 8 101
 (3) - _ast_realloc: Memory Allocation Failure in function __ast_websocket_read at line 456 of res_http_websocket.c
@@ -22,3 +23,4 @@ Tested with QueueMetrics 14.06.2
 (5) - _ast_realloc: Memory Allocation Failure in function __ast_websocket_read at line 504 of res_http_websocket.c
 (6) - chan_sip.c:10509 process_sdp: Rejecting secure audio stream without encryption details: audio 57539 UDP/TLS/RTP/SAVPF 109 0 8 101
 (7) - chan_sip.c:10648 process_sdp: Can't provide secure audio requested in SDP offer
+```
