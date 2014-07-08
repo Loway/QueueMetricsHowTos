@@ -30,32 +30,31 @@ Log in as demoadmin with password demo; if you don't see any errors, then your s
 * Through an SSH connection, enter in the /etc/asterisk folder and edit the sip_custom.conf file.
 * Add the following sketch. This defines a template for agents using the WebRTC softphone integrated in Icon, the QueueMetrics realtime page.   
 
-. 
+``` 
+[WebRTC](!)
+type=peer
+host=dynamic
+nat=force_rport,comedia
+context=from-internal
+callcounter=yes
+busylevel=1
+call-limit=1
+encryption = yes
+qualify=yes
+avpf = yes
+allow=all
+icesupport = yes
+srtpcapable=yes
+videosupport=no
 
-	[WebRTC](!)
-	type=peer
-	host=dynamic
-	nat=force_rport,comedia
-	context=from-internal
-	callcounter=yes
-	busylevel=1
-	call-limit=1
-	encryption = yes
-	qualify=yes
-	avpf = yes
-	allow=all
-	icesupport = yes
-	srtpcapable=yes
-	videosupport=no
+[101](WebRTC)
+username=101
+secret=101
 
-	[101](WebRTC)
-	username=101
-	secret=101
-
-	[102](WebRTC)
-	username=102
-	secret=102
-
+[102](WebRTC)
+username=102
+secret=102
+```
 
 The sketch defines also two SIP accounts (101 and 102) used by two sample agents defined in QueueMetrics.
 
@@ -65,11 +64,11 @@ The sketch defines also two SIP accounts (101 and 102) used by two sample agents
 * Save the file and exit.
 * Edit the file sip_general_custom.conf and add the following keys to enable the ws transport:
 
-.
 
-	allowguest=no
-	transport=udp,ws,wss
-	
+```
+allowguest=no
+transport=udp,ws,wss
+```	
 
 ## Step 7: Define two sample callers extensions in Elastix
 Two samples extensions are used in this tutorial to simulate calls flowing to the inbound queue. To do this, proceed with the following steps.
@@ -97,11 +96,11 @@ QueueMetrics needs to know the IP where the softphone will register. To do that:
 * From the QueueMetrics home page, click on the Edit system parameters link under the Administrative tools section.
 * Search the default.sipaddress, default.websocketurl and default.rtcWebBreaker keys and edit as following:
  
-.
-
-	default.sipaddress=XXX.XXX.XXX.XXX
-	default.websocketurl=ws://XXX.XXX.XXX.XXX:8088/ws
-	default.rtcWebBreaker=true
+```
+default.sipaddress=XXX.XXX.XXX.XXX
+default.websocketurl=ws://XXX.XXX.XXX.XXX:8088/ws
+default.rtcWebBreaker=true
+```
 
 where XXX.XXX.XXX.XXX is the IP address valid for your install: this is the IP address associated to your PBX.
 
