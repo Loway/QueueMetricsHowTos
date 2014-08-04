@@ -136,7 +136,7 @@ Now restart qloaderd:
 
 ### 4.2 QueueMetrics configuration
 
-If you have a single Asterisk server and have not modified the PARTITION value in the Qloader configuration add (or, if exists, modify), in the configuration.properties file, the following value:
+If you have a single Asterisk server and have not modified the PARTITION value in the Qloader configuration add (or, if exists, modify), in the configuration.properties file, the following values:
 
     default.queue_log_file=sql:P001
     callfile.dir=tcp:admin:password@ip-address
