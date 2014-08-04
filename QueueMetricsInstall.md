@@ -119,7 +119,7 @@ Now that you have got QueueMetrics running you need to configure it in order to 
 
 ### 4.1 Qloader configuration
 
-On the Asterisk systems edit the _/etc/sysconfig/qloaderd_ file; you need to set the following values in order to tell Qloader to work with the QueueMetrics database:
+On the Asterisk systems edit the _/etc/sysconfig/qloaderd_ file; you need to set the following values in order to tell Qloaderd to work with the QueueMetrics database:
   
     MYSQLHOST=
     MYSQLUSER=
@@ -139,6 +139,11 @@ Now restart qloaderd:
 If you have a single Asterisk server and have not modified the PARTITION value in the Qloader configuration add (or, if exists, modify), in the configuration.properties file, the following value:
 
     default.queue_log_file=sql:P001
+    callfile.dir=tcp:admin:password@ip-address
+    		# user:pass are the credentials for the Asterisk's AMI interface.
+    		# You might have to configure a user in each of the 
+    		# Asterisk servers' /etc/manager.conf file.
+    		# serverhost is the IP address of that server.
 
 QueueMetrics is now already able to retrieve information from Asterisk.
 Instead, if you have a server cluster add or modify these values as follows:
@@ -161,6 +166,12 @@ Instead, if you have a server cluster add or modify these values as follows:
     		# configuration file in that server.
 
 Now, to enable QueueMetrics to place calls and log the agents on and off the queues you need to include the QueueMetrics dialplan in Asterisk. You can find it in _/usr/local/queuemetrics/qm-current/WEB-INF/mysql-utils/extensions-examples_.
+
+The last thing to do is to give QueueMetrics' configuration files the right permissions in order to edit them directly from the QueueMetrics web interface:
+
+    cd queuemetrics-path/WEB-INF
+    chmod a+w configuration.properties
+    chmod a+w tpf.properties
 
 ### 4.3 Does it work?
 
