@@ -1,7 +1,7 @@
 # QueueMetrics Agent page Web RTC compatibility matrix
-
+_Author: Marco Signorini_   
 This document is a summary of compatibility tests between QueueMetrics WebRTC embedded softphone and several browsers and/or Asterisk versions/distro
-Is not intended to be exaustive but as work in progress. Please feel free to update if you have more details on that. Thanks.
+Is not intended to be exaustive but as work in progress. Please feel free to update if you have more details on that. Thanks.   
 Tested with QueueMetrics 14.06.2
 
 ## Compatibility matrix
