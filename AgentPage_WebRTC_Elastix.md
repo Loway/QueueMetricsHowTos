@@ -1,5 +1,5 @@
 # QueueMetrics + WebRTC + Elastix how to
-
+_Author: Marco Signorini_   
 This file is a step by step guide to integrate Icon, the new QueueMetrics agent realtime page with embedded WebRTC softphone, with Elastix.
 
 
