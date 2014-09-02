@@ -165,7 +165,7 @@ Instead, if you have a server cluster add or modify these values as follows:
     		# partition-name is the value of PARTITION in the Qloader's
     		# configuration file in that server.
 
-Now, to enable QueueMetrics to place calls and log the agents on and off the queues you need to include the QueueMetrics dialplan in Asterisk. You can find it in _/usr/local/queuemetrics/qm-current/WEB-INF/mysql-utils/extensions-examples_.
+Now, to enable QueueMetrics to place calls and log the agents on and off the queues you need to include the QueueMetrics dialplan in Asterisk. You can find it in _/usr/local/queuemetrics/qm-current/WEB-INF/mysql-utils/extensions-examples/extensions\_queuemetrics\_18.conf_.
 
 The last thing to do is to give QueueMetrics' configuration files the right permissions in order to edit them directly from the QueueMetrics web interface:
 
