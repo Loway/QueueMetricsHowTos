@@ -15,6 +15,14 @@ Tested with QueueMetrics 14.06.2
 | FreePBX BETA-6.12.65-13 32bit (Asterisk 12.3.2) | OK (1) | OK                 | KO: registration OK but not calls (7)| KO  | KO: registration OK but no calls (5) | KO |
 
 
+|Browser/Setup | Chrome 37.0.2062.103 m (HTTP) | Chrome 37.0.2062.103 m (HTTPS) | 
+| :----------: | :---------------------------: | :----------------------------: | 
+| Elastix 2.4.0 (Asterisk 11.12.0) | OK (1)     |  OK                           | 
+
+
+
+
+
 ```
 (1) - Chrome asks for sharing microphone on each call
 (2) - chan_sip.c:10509 process_sdp: Rejecting secure audio stream without encryption details: audio 60349 UDP/TLS/RTP/SAVPF 109 0 8 101
