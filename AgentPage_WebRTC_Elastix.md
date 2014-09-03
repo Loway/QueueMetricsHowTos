@@ -6,10 +6,13 @@ This file is a step by step guide to integrate Icon, the new QueueMetrics agent 
 ## Step 1: Install Elastix
 * Download Elastix 2.4.0 Stable (we tested the 32 bit version) and proceed installing the ISO as usual.
 
-## Step 2: Upgrade to Asterisk 11.7.0
+## Step 2: Upgrade to Asterisk 11.12.0
 * Access to the Elastix configuration panel and click on System->Updates menu. Switch to the Package view by clicking on the left side link.
 * Click on the Show Filter menu then type asterisk inside the "Name" edit box. Select "All" in the status dropdown then click on "Search".
-* In the resulting table click "Install" on asterisk 11.7.0 row then wait until the process terminates.
+* In the resulting table click "Install" on asterisk 11.12.0 row, then wait until the process terminates.
+
+(Tested with asterisk 11.7.0 and asterisk 11.12.0)
+
 
 ## Step 3: Installing QueueMetrics with Espresso
 * Open an SSH session pointing your SSH client to the Elastix machine.
