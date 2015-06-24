@@ -20,7 +20,14 @@ Tested with QueueMetrics 14.06.2
 | Elastix 2.4.0 (Asterisk 11.12.0) | OK (1)     |  OK                           | 
 
 
+Tested with QueueMetrics 15.02.11 and Asterisk Chan SIP.
 
+## Compatibility matrix
+
+|Browser/Setup | Chrome 43.0.2357.130 m (HTTP) | Chrome 43.0.2357.130 m (HTTPS) | Firefox 38.0.5 (HTTP) | Firefox 38.0.5 (HTTPS) | IE11 11.0.9600.17842 (HTTP) | IE11 11.0.9600.17842 (HTTPS) |
+| :----------: | :---------------------------: | :----------------------------: | :-----------------: | :------------------: | :-------------------------: | :--------------------------: |
+| Asterisk 13.4.0 | OK (1)                     |  OK                            | OK (8)   	      | KO                   | KO | KO |
+| Asterisk 11.18.0  | OK (1)                   |  OK                            | OK (8)	      | KO                   | KO | KO |
 
 
 ```
@@ -31,4 +38,5 @@ Tested with QueueMetrics 14.06.2
 (5) - _ast_realloc: Memory Allocation Failure in function __ast_websocket_read at line 504 of res_http_websocket.c
 (6) - chan_sip.c:10509 process_sdp: Rejecting secure audio stream without encryption details: audio 57539 UDP/TLS/RTP/SAVPF 109 0 8 101
 (7) - chan_sip.c:10648 process_sdp: Can't provide secure audio requested in SDP offer
+(8) - Firefox asks for sharing microphone on each call
 ```
