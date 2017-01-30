@@ -133,6 +133,17 @@ Now restart qloaderd:
 
     service qloaderd restart
 
+If Qloader is on a different machine that QueueMetrics (and MySQL) you will need to create a new database user able to connect remotely.
+
+Log in MySQL as *root*:
+
+	# mysql -uroot -p
+	
+One you're in create a new remote user and give it all grants on the *queuemetrics* database:
+
+	mysql> CREATE USER 'queuemetrics'@'%' IDENTIFIED BY 'javadude';
+	mysql> GRANT ALL PRIVILEGES ON queuemetrics . * TO 'queuemetrics'@'%';
+	mysql> FLUSH PRIVILEGES;
 
 ### 4.2 QueueMetrics configuration
 
