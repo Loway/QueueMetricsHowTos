@@ -3,14 +3,14 @@
 QueueMetrics is able to operate in various server configurations in order to meet all your needs.
 Depending on how big is your system you might want to have a single-server solution (Asterisk and QueueMetrics on the same server), a separated-server solution (Asterisk and QueueMetrics reside on two different servers) and a cluster solution (one QueueMetrics server monitoring many Asterisk servers).
 
-## 1 Understanding How QueueMetrics Works
+# 1 Understanding How QueueMetrics Works
 
 All the data which QueueMetrics works on are stored in Asterisk's queue_log file. In a single-server configuration, QueueMetrics is able to read directly from this file, though this is not an efficient approach.
 The Qloader script provides an effective way to retrieve information from the _queue&#95;log_ file without overloading the Asterisk server(s) and it's essential in a cluster-server configuration.
 It reads the new data from the queue_log file and sends it to the QueueMetrics database wherever it is.
 We always suggest to use the Qloader script whatever configuration you have.
 
-## 2 Installing QueueMetrics with Espresso
+# 2 Installing QueueMetrics with Espresso
 
 If you are setting up a single-server solution on an Asterisk-ready Linux distribution (eg. Elastix, AsteriskNOW, FreePBX, etc) you can get a working QueueMetrics system in a few minutes.
 
@@ -28,7 +28,7 @@ Now you can point your browser to http://hostname:8080/queuemetrics and start wo
 
 TIP:	The default username is 'demoadmin' and the password is 'demo'.
 
-## 3 Installing QueueMetrics manually
+# 3 Installing QueueMetrics manually
 
 With this step we are going to install QueueMetrics on a server, though it still need to be configured in order to work.
 
@@ -58,7 +58,7 @@ Now, to check that everything works you can open your browser and point it to _h
 After that you will be able to log in with the default username _demoadmin_ and password _demo_.
 Obviously, at the the moment, no data is shown.
 
-## 4 Configuring QueueMetrics
+# 4 Configuring QueueMetrics
 
 Now that you have got QueueMetrics running you need to configure it in order to retrieve data from Asterisk.
 
@@ -134,12 +134,12 @@ The last thing to do is to give QueueMetrics' configuration files the right perm
 QueueMetrics has some test tools to check if all is running the right way and for troubleshooting.
 The System Diagnostic Tools page offers a number of tools that check database and AMI connections and more (see Troubleshooting).
 
-## 5 Applying a License
+# 5 Applying a License
 
 If you have a QueueMetrics license key you can apply it from the license page  by clicking on Install new license key. You have to be logged as an administrator user.
 Alternatively you can modify the LICENZA_ARCHITETTURA parameter in the _/usr/local/queuemetrics/tomcat/webapps/queuemetrics/WEB-INF/web.xml_ file.
 
-## 6 Troubleshooting
+# 6 Troubleshooting
 
 ### 6.1 QueueMetrics is not available
 
@@ -173,6 +173,6 @@ You can find them clicking on System Diagnostic Tools or pointing your browser t
 
 The most common questions are answered in the QueueMetrics FAQs section in our website: _http://queuemetrics.com/faq.jsp_
 
-## 7 Conclusion
+# 7 Conclusion
 
 QueueMetrics has a lot of configuration options to enable you personalizing it for your needs. We suggest you to read about them on the user manuals at http://queuemetrics.com/manual_list.jsp .
