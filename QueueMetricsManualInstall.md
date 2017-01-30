@@ -1,5 +1,9 @@
+Being CentOS the natural habitat for Asterisk and almost all the Asterisk-related world, we always suggest to install QueueMetrics on a CentOS machine (or whatever CentOS flavour like FreePBX or Elastix), and if you ask us CentOS is always the better solution, even in a virtual machine. Usinig CentOS is not always possible though so your are free to install QueueMetrics in whatever system you prefer.
+
 QueueMetrics is a Java servlet application that runs over a Tomcat server. Potentially you can run QueueMetrics on every Linux distribution and Operating System, Windows as well.
+
 Although the procedure may change amongst the various different systems, conceptually it's ever the same: install all the dependencies and put QueueMetrics on the Tomcat server.
+
 Given that we can't cover every possible Operating System in this tutorial, we'll use a Debian machine to show you the steps to get QueueMetrics working. Your part will be to adapt the steps to your system and situation and remember that filenames and directories may be different.
 
 # 1 Installing Java
