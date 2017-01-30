@@ -46,7 +46,7 @@ Now, install the Qloader script in each of your Asterisk boxes.
     
 ### 3.2 On another system
 
-Although we don't suggest it, [learn how to install QueueMetrics manually](QueueMetricsManualInstall.md) on a non-RPM Linux distro or Windows and any other system where you can run Tomcat.
+Although we don't suggest it, [click here to learn how to install QueueMetrics manually](QueueMetricsManualInstall.md) on a non-RPM Linux distro or Windows and any other system where you can run Tomcat.
 
 If you ask us, running QueueMetrics on CentOS (or whatever CentOS flavour, like Elastix or FreePBX) is always the best solution, even on a virtual machine.
 
