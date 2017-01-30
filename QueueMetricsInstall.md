@@ -1,13 +1,16 @@
 # How to Get a Working QueueMetrics System
 
 QueueMetrics is able to operate in various server configurations in order to meet all your needs.
+
 Depending on how big is your system you might want to have a single-server solution (Asterisk and QueueMetrics on the same server), a separated-server solution (Asterisk and QueueMetrics reside on two different servers) and a cluster solution (one QueueMetrics server monitoring many Asterisk servers).
 
 # 1 Understanding How QueueMetrics Works
 
 All the data which QueueMetrics works on are stored in Asterisk's queue_log file. In a single-server configuration, QueueMetrics is able to read directly from this file, though this is not an efficient approach.
+
 The Qloader script provides an effective way to retrieve information from the _queue&#95;log_ file without overloading the Asterisk server(s) and it's essential in a cluster-server configuration.
-It reads the new data from the queue_log file and sends it to the QueueMetrics database wherever it is.
+
+It reads the new data from the queue_log file and sends it to the QueueMetrics database wherever it is.   
 We always suggest to use the Qloader script whatever configuration you have.
 
 # 2 Installing QueueMetrics with Espresso
