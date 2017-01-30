@@ -126,7 +126,11 @@ Instead, if you have a server cluster add or modify these values as follows:
 
 ### 4.3 Include QueueMetrics dialplan in Asterisk
 
-Now, to enable QueueMetrics to place calls and log the agents on and off the queues you need to include the QueueMetrics dialplan in Asterisk. If you installed QueueMetrics with *yum*, you can find it in **/usr/local/queuemetrics/qm-current/WEB-INF/mysql-utils/extensions-examples/extensions\_queuemetrics\_18.con**.
+Now, to enable QueueMetrics to place calls and log the agents on and off the queues you need to include the QueueMetrics dialplan in Asterisk. If you installed QueueMetrics with *yum*, you can find it in **/usr/local/queuemetrics/qm-current/WEB-INF/mysql-utils/extensions-examples/extensions\_queuemetrics\_18.conf**.
+
+Copy the file under **/etc/asterisk/** then add the following line at the end of your **extensions.conf**, or **extensions_custom.conf** if your PBX has this file:
+
+	#include extensions_queuemetrics_18.conf
 
 Then open the Asterisk CLI and reload the dialplan:
 
