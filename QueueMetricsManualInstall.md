@@ -1,3 +1,5 @@
+**IMPORTANT: you should install QueueMetrics manually only if you are an expert user. Unfortunately this is a non-standard installation in a non-standard environment and Loway won't be able to support you with system administraton problems (tomcat configuration, database permissions and so on), although the support on the QueueMetrics software itself will remain available as always.**
+
 Being CentOS the natural habitat for Asterisk and almost all the Asterisk-related world, we always suggest to install QueueMetrics on a CentOS machine (or whatever CentOS flavour like FreePBX or Elastix), and if you ask us CentOS is always the better solution, even in a virtual machine. Usinig CentOS is not always possible though so your are free to install QueueMetrics in whatever system you prefer.
 
 QueueMetrics is a Java servlet application that runs over a Tomcat server. Potentially you can run QueueMetrics on every Linux distribution and Operating System, Windows as well.
