@@ -1,10 +1,11 @@
-**IMPORTANT: you should install QueueMetrics manually only if you are an expert user. Unfortunately this is a non-standard installation in a non-standard environment and Loway won't be able to support you with system administraton problems (tomcat configuration, database permissions and so on), although the support on the QueueMetrics software itself will remain available as always.**
-
 
 # Installing QueueMetrics on a Debian or Ubuntu server
 
 This guide will help you install a working QueueMetrics system on a Debian or Ubuntu box. This guide is meant to be run
 as a root user.
+
+**IMPORTANT: you should install QueueMetrics manually only if you are an expert user. Unfortunately this is a non-standard installation in a non-standard environment and Loway won't be able to support you with system administraton problems (tomcat configuration, database permissions and so on), although the support on the QueueMetrics software itself will remain available as always.**
+
 
 ## Install dependencies
 
@@ -20,11 +21,11 @@ When the database is being set up, it will ask for a root password. Enter it and
 
 You can find the latest QueueMetrics version at https://www.queuemetrics.com/download.jsp
 
-cd /var/lib/tomcat7/webapps/
-wget http://downloads.loway.ch/beta/QueueMetrics-16.10.8.tar.gz
-mv queuemetrics-16.10.8/ QM
-cp /usr/share/java/mysql-connector-java.jar QM/WEB-INF/lib/
-chown tomcat7.tomcat7 QM/WEB-INF/*.properties
+     cd /var/lib/tomcat7/webapps/
+     wget http://downloads.loway.ch/beta/QueueMetrics-16.10.8.tar.gz
+     mv queuemetrics-16.10.8/ QM
+     cp /usr/share/java/mysql-connector-java.jar QM/WEB-INF/lib/
+     chown tomcat7.tomcat7 QM/WEB-INF/*.properties
 
 ## Configure Tomcat
 
@@ -54,9 +55,9 @@ Start the servers:
 
 ## Finish the installation
 
-Connect to QueueMetrics at http://server.address/QM and:
+Connect to QueueMetrics at http://my.server.address/QM and:
 
-* You will see a database error (because the database does not exist); in a few seconds will redirect you to the Create Database wizard
+* You will see a database error (because the database does not yet exist); in a few seconds will redirect you to the Create Database wizard
 * On the "Create Database Now" page, enter the MySQL root password
 * The initial database will be uploaded; click on "Start" to start QM
 * Accept license terms
@@ -64,9 +65,12 @@ Connect to QueueMetrics at http://server.address/QM and:
 
 ## Install a license key
 
-If you have a license key, you can install it in the file 
+If you have a license key, you can install it in the file tpf.properties:
 
     cd /var/lib/tomcat7/webapps/
     vi QM/WEB-INF/tpf.properties
+
+You can ask for a free demo license at https://www.queuemetrics.com/try-free.jsp
+
 
 
