@@ -5,7 +5,7 @@ A set of simple How-to's for common QueueMetrics tasks.
 
 Now featuring:
 
-## Istallation guides
+## Install guides
 
 * [QueueMetrics_Install](QueueMetricsInstall.md) - How to Get a Working QueueMetrics System
 * [QueueMetrics_Manual_Install](QueueMetricsManualInstall.md) - Learn how to install QueueMetrics on Debian, Windows and any other system.
