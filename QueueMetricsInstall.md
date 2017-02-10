@@ -144,7 +144,7 @@ The System Diagnostic Tools page offers a number of tools that check database an
 # 5 Applying a License
 
 If you have a QueueMetrics license key you can apply it from the license page  by clicking on Install new license key. You have to be logged as an administrator user.
-Alternatively you can modify the LICENZA_ARCHITETTURA parameter in the _/usr/local/queuemetrics/tomcat/webapps/queuemetrics/WEB-INF/web.xml_ file.
+Alternatively you can modify the LICENZA_ARCHITETTURA parameter in the _/usr/local/queuemetrics/tomcat/webapps/queuemetrics/WEB-INF/tpf.properties_ file.
 
 # 6 Troubleshooting
 
