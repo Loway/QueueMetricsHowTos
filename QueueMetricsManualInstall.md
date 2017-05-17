@@ -40,15 +40,7 @@ In Debian you can install it with a simple command and follow the procedure.
         
 * Restart and point the browser to the server at port 8080 (e.g. 10.10.1.1:8080) to verify that Tomcat is working correctly.
 
-# 4 Installing MySQL connector for Java
-
-* Download the MySQL-Java connector: http://dev.mysql.com/downloads/connector/j/
-* Unpack it and move it where you retain suitable.
-
-        tar xzfv mysql-connector-java-5.1.26.tar.gz 
-        mv mysql-connector-java-5.1.26 /opt/mysql-connector-java-5.1.26
-
-# 5 Installing QueueMetrics
+# 4 Installing QueueMetrics
 
 * Download QueueMetrics: http://queuemetrics.com/download.jsp
 * Unpack it and move it to the Tomcat's webapp directory
