@@ -8,10 +8,10 @@ Depending on how big is your system you might want to have a single-server solut
 
 All the data which QueueMetrics works on are stored in Asterisk's queue_log file. In a single-server configuration, QueueMetrics is able to read directly from this file, though this is not an efficient approach.
 
-The Qloader script provides an effective way to retrieve information from the _queue&#95;log_ file without overloading the Asterisk server(s) and it's essential in a cluster-server configuration.
+The Uniloader software provides an effective way to retrieve information from the _queue&#95;log_ file without overloading the Asterisk server(s) and it's essential in a cluster-server configuration.
 
 It reads the new data from the queue_log file and sends it to the QueueMetrics database wherever it is.   
-We always suggest to use the Qloader script whatever configuration you have.
+We always suggest to use the Uniloader software whatever configuration you have.
 
 # 2 Installing QueueMetrics with Espresso
 
@@ -25,7 +25,7 @@ Just add our repository and install the package:
     yum install queuemetrics-espresso
     
 It will detect your operating system and your Asterisk versions and configure QueueMetrics to work with them.
-It will also install and configure all the other software needed (Tomcat, MySQL, Qloader script) and creates a working AMI connection to Asterisk.
+It will also install and configure all the other software needed (Tomcat, MySQL, Uniloader) and creates a working AMI connection to Asterisk.
 
 Now you can point your browser to http://hostname:8080/queuemetrics and start working.
 
@@ -42,10 +42,10 @@ Just add our repository and install the package:
     wget -P /etc/yum.repos.d http://yum.loway.ch/loway.repo
     yum install queuemetrics
 
-Now, install the Qloader script in each of your Asterisk boxes.
+Now, install the Uniloader software in each of your Asterisk boxes.
     
 	wget -P /etc/yum.repos.d http://yum.loway.ch/loway.repo
-	yum install qloaderd
+	yum install uniloader
     
 ### 3.2 On another system
 
@@ -65,23 +65,19 @@ Obviously, at the the moment, no data is shown.
 
 Now that you have got QueueMetrics running you need to configure it in order to retrieve data from Asterisk.
 
-### 4.1 Qloader configuration
+### 4.1 Uniloader configuration
 
-On the Asterisk systems edit the _/etc/sysconfig/qloaderd_ file; you need to set the following values in order to tell Qloaderd to work with the QueueMetrics database:
-  
-    MYSQLHOST=
-    MYSQLUSER=
-    MYSQLPASS=
-    
-If you're running an Asterisk server cluster you also have to modify the PARTITION value, giving to each of them a different name (usually P001, P002, P003, etc). This is fundamental to avoid any possible concurrent writing issue.
+On the Asterisk systems edit the _/etc/sysconfig/uniloader_ file; you need to set the following values, in the "Local install" section in order to tell Uniloader to work with the QueueMetrics database, change the IP in the URI field, default username is _queuemetrics_ and password is _javadude_, change as needed.
+     
+If you're running an Asterisk server cluster you also have to modify the TOKEN value, giving to each of them a different name (usually P001, P002, P003, etc). This is fundamental to avoid any possible concurrent writing issue.
 
-CAUTION:	Each Asterisk server's Qloader script have to use a different partition.
+CAUTION:	Each Asterisk server's Uniloader have to use a different partition (TOKEN).
 
-Now restart qloaderd:
+Now restart Uniloader
 
-    service qloaderd restart
+    service uniloader restart
 
-If Qloader is on a different machine that QueueMetrics (and MySQL) you will need to create a new database user able to connect remotely.
+If Uniloader is on a different machine that QueueMetrics (and MySQL) you will need to create a new database user able to connect remotely.
 
 Log in MySQL as *root*:
 
@@ -95,7 +91,7 @@ One you're in create a new remote user and give it all grants on the *queuemetri
 
 ### 4.2 QueueMetrics configuration
 
-If you have a single Asterisk server and have not modified the PARTITION value in the Qloader configuration add (or, if exists, modify), in the configuration.properties file, the following values:
+If you have a single Asterisk server and have not modified the TOKEN (partition) value in the Uniloader configuration add (or, if exists, modify), in the configuration.properties file, the following values:
 
     default.queue_log_file=sql:P001
     callfile.dir=tcp:admin:password@ip-address
@@ -121,7 +117,7 @@ Instead, if you have a server cluster add or modify these values as follows:
     		# Asterisk servers' /etc/manager.conf file.
     		# serverhost is the IP address of that server.
   	cluster.servername.queuelog=sql:partition-name
-    		# partition-name is the value of PARTITION in the Qloader's
+    		# partition-name is the value of TOKEN in the Uniloader's
     		# configuration file in that server.
 
 ### 4.3 Include QueueMetrics dialplan in Asterisk
