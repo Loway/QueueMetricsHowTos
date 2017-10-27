@@ -67,7 +67,9 @@ Now that you have got QueueMetrics running you need to configure it in order to 
 
 ### 4.1 Uniloader configuration
 
-On the Asterisk systems edit the _/etc/sysconfig/uniloader_ file; you need to set the following values, in the "Local install" section in order to tell Uniloader to work with the QueueMetrics database, change the IP in the URI field, default username is _queuemetrics_ and password is _javadude_, change as needed.
+On the Asterisk systems edit the _/etc/sysconfig/uniloader_ file; you need to set the following values, in the "Local install" section in order to tell Uniloader to work with the QueueMetrics database, change the IP if needed in the URI field, default username is _queuemetrics_ and password is _javadude_, change as needed.
+
+In a normal local installation (QueueMetrics is on the same machine as Asterisk), the default values are ok in the majority of cases.
      
 If you're running an Asterisk server cluster you also have to modify the TOKEN value, giving to each of them a different name (usually P001, P002, P003, etc). This is fundamental to avoid any possible concurrent writing issue.
 
